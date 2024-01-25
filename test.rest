@@ -1,0 +1,15 @@
+@url = http://localhost:2501
+
+### GET ALL SKILLS
+GET {{url}}/skills
+
+### ADD A SKILL
+POST {{url}}/skills
+content-type: application/json
+
+{
+	"idCode":"002",
+	"name":"test",
+	"url":"url-hier.com", 
+	"description":"description test kommt hier"
+}
