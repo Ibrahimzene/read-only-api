@@ -1,15 +1,13 @@
+import prisma from './db.js';
 import express from 'express';
 
 const app = express();
-const port = 3733;
+app.use(express.json());
+const port = 2501;
 
-app.get('/', (req, res) => {
-	res.send(`
-<h1>Skills API</h2>
-<ul>
-	<li><a href="/skills">/skills</a> - web development skills</li>
-</ul>
-	`);
+app.get('/', async(req, res) => {
+	const skills = await prisma.skill.findMany();
+    res.json(skills);
 });
 
 app.get('/skills', (req, res) => {
