@@ -8,7 +8,7 @@ POST {{url}}/skills
 content-type: application/json
 
 {
-	"idCode":"002",
+	"idCode":"003",
 	"name":"test",
 	"url":"url-hier.com", 
 	"description":"description test kommt hier"
